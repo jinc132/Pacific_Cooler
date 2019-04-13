@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Collapse} from 'reactstrap';
 import './App.css';
-import SignIn from './Signin.js'
+import SignIn from './signin.js'
 
 class App extends Component {
   constructor(props) {
@@ -22,8 +22,10 @@ class App extends Component {
     let renderFrontPage = () => {
       return (
         <div>
-
-        </div>
+          <h3><b>What's Poppin'?</b></h3>
+          <button href="/SignIn">Sign In</button>
+          <button href="/SignIn">Create an account</button>
+        </div >
       );
     }
 
