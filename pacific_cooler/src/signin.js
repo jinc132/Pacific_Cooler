@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import App from './App';
 
 class signin extends Component {
 
@@ -9,3 +10,5 @@ class signin extends Component {
         )
     }
 }
+
+export default signin;
