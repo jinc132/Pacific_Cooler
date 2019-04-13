@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import App from './App';
+import './signin.css';
 
 class signin extends Component {
 
     render() {
 
         return (
-            <h3>Coming Soon!</h3>
+            <div className="signInBar">
+
+            </div>
         )
     }
 }

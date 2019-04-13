@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Collapse} from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Collapse } from 'reactstrap';
 import './App.css';
 import SignIn from './signin.js'
 
@@ -15,22 +15,22 @@ class App extends Component {
   }
 
   toggle() {
-    this.setState({isOpen: !this.state.isOpen});
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
     let renderFrontPage = () => {
-      return (
+      return(
         <div>
           <h3><b>What's Poppin'?</b></h3>
-          <button href="/SignIn">Sign In</button>
-          <button href="/SignIn">Create an account</button>
+          <button><a href="/SignIn">Sign In</a></button>
+          <button><a href="/SignIn">Create Account</a></button>
         </div >
       );
     }
 
-    return (
-      <div className="App">
+    let menu = (
+      <div className="App" >
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">reactstrap</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -41,15 +41,24 @@ class App extends Component {
               </NavItem>
             </Nav>
           </Collapse>
-          <Switch>
+        </Navbar>
+        <Switch>
             <Route exact path={"/"} render={renderFrontPage} />
             <Route path={"/SignIn"} Component={SignIn} />
             <Redirect to={"/"} />
-          </Switch>
-        </Navbar>
+        </Switch>
+      </div >
+    );
+
+    return (
+      <div>
+        <header>
+        </header>
+        <main>
+          {menu}
+        </main>
       </div>
     );
   }
 }
-
 export default App;
