@@ -30,7 +30,7 @@ class App extends Component {
     }
 
     let menu = (
-      <div className="App" >
+      <div className="App">
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">reactstrap</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />

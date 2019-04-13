@@ -6,8 +6,8 @@ class signin extends Component {
     render() {
 
         return (
-            <div className="signInBar">
-
+            <div>
+                <h3>Comming</h3>
             </div>
         )
     }
